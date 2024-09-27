@@ -7,7 +7,7 @@ function DataStore() {
 DataStore.prototype.saveAllVariables = function(response, langArr) {
     this.botVariables = [];
     for (var i = 0; i < langArr.length; i++) {
-        if (response[i].errors) {
+        if (response && response[i].errors) {
             console.log(response[i].errors[0].msg);
             var obj = {
                 "variables": [],
